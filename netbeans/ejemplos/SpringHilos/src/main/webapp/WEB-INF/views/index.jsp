@@ -1,11 +1,17 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}" scope="request" />
+
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>jQuery UI Progressbar - Custom Label</title>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        <title>Ejecutando hilos con Spring y barra de progreso JQuery UI</title>
+        <link rel="stylesheet" href="${contextPath}/src/css/jquery-ui.css">
+        <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+        
         <style>
             .ui-progressbar {
                 position: relative;
@@ -18,12 +24,13 @@
                 text-shadow: 1px 1px 0 #fff;
             }
         </style>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script src="${contextPath}/src/js/jquery-1.12.4.js"></script>
+        <script src="${contextPath}/src/js/jquery-ui.js"></script>
         <script>
             $(function () {
                 var objInterval = {
-                    url: 'http://localhost:8083/SpringHilos/aplication/response2',
+                    url: '${contextPath}/aplication/response2',
                     progressbar: {
                         bar: {
                             id: '#progressbar',
@@ -38,7 +45,7 @@
                     timeLoop: 1500,
                     interval: null,
                     messages: {
-                        ajaxError: 'Disculpe, existió un problema',
+                        ajaxError: 'Disculpe, existiÃ³ un problema',
                         labelValue: 'value',
                         labelComplete: 'Complete'
                     },
@@ -98,7 +105,7 @@
                 //objInterval.callnterval();
                 
                 $('#progressbar').progress({
-                    url: 'http://localhost:8083/SpringHilos/aplication/response2',
+                    url: '${contextPath}/aplication/response2',
                     pLabel: '.progress-label'
                 });
             });
@@ -111,7 +118,7 @@
                             pLabel: '',
                             timeLoop: 1500,
                             messages: {
-                                ajaxError: 'Disculpe, existió un problema',
+                                ajaxError: 'Disculpe, existiÃ³ un problema',
                                 labelValue: 'value',
                                 labelComplete: 'Complete'
                             },
@@ -141,7 +148,7 @@
                                 if (callback !== null) {
                                     loop.interval = setInterval(callback, defaultOptions.timeLoop);
                                 } else {
-                                    console.log('No hay función callback a ejecutar en el loop ...');
+                                    console.log('No hay funciÃ³n callback a ejecutar en el loop ...');
                                 }
                             },
                             callClearInterval: function () {
