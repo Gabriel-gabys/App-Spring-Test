@@ -3,19 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package mx.com.gaby.controller;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import mx.com.gaby.dto.ResultAsyncDTO;
 import mx.com.gaby.service.AsynchronousService;
-import mx.com.pendulum.carga.util.Md5Converter;
-import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+
 /**
- *
+ * Controlador principal
  * @author iam_g
  */
 @Controller
