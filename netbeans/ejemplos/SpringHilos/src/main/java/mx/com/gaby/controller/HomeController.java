@@ -19,7 +19,9 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
 /**
- * Controlador principal
+ * Controlador principal. Aqui se redirecciona para la vista inicial
+ * Ejemplos de llamadas a los  hilos con la anotación "@Async" y con el método "run"
+ * 
  * @author iam_g
  */
 @Controller
