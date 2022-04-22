@@ -12,7 +12,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
-        <spring.version>4.3.3.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
         <hibernate.version>5.2.3.Final</hibernate.version>
         <hibernate.validator.version>5.3.0.Final</hibernate.validator.version>
         <mysql.version>6.0.4</mysql.version>
